@@ -225,5 +225,5 @@ bindsym $mod+d exec "dmenu_run -nf '#BBBBBB' -nb '#781860' -sb '#C06090' -sf '#E
 assign [class="firefox"] number 1
 assign [class="discord"] number 2
 assign [class="steam"] number 2
-assign [class="prismlauncher"] number 2
+assign [class="PrismLauncher"] number 2
 assign [class="Minecraft"] number 3
