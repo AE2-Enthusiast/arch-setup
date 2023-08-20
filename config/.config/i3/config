@@ -203,11 +203,11 @@ bar {
 # Removes the borders that touch the edge of the monitor
 hide_edge_borders both
 
-# Borders!
-
-
+# Autostart of various daemons to run in the background
 # Notification server
 exec dunst
+# Window compositor (transparency)
+exec picom
 
 # Colors! TODO split this into its own file to help with theming
 # class                 border  bground text    indicator child_border
