@@ -1,0 +1,2 @@
+# Packages related to connecting to the internet currently only for wifi
+iwd # Makes connections
