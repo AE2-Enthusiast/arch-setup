@@ -208,7 +208,9 @@ hide_edge_borders both
 exec dunst
 # Window compositor (transparency)
 exec picom
-
+# Desktop background
+# Not actually a daemon but it doesn't open up anything
+exec nitrogen --restore
 # Colors! TODO split this into its own file to help with theming
 # class                 border  bground text    indicator child_border
 client.focused          #C06090 #F0A8D8 #030003 #F06090   #F0A8D8
