@@ -14,5 +14,17 @@
 
 # Links everything in the .config folder into the default XDG config folder
 
-configPath=$(realpath ../config/.config)
-ln -sfv -t ~/.config/ "$configPath"/*
+xdgConfigPath=$(realpath ../config/.config)
+ln -sfv -t ~/.config/ "$xdgConfigPath"/*
+
+homeConfigPath=$(realpath ../config/home)
+IFS='
+'
+homeConfigs=$(\ls -A1 $homeConfigPath)
+
+for path in $homeConfigs
+do
+    #echo $homeConfigPath/$path
+    ln -sfv -t ~/ $homeConfigPath/$path
+done
+unset $IFS
