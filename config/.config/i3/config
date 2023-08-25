@@ -211,12 +211,17 @@ exec picom
 # Desktop background
 # Not actually a daemon but it doesn't open up anything
 exec nitrogen --restore
+
+# Removes window title bars
+default_border pixel 4
+set $blue #5bcefa
+
 # Colors! TODO split this into its own file to help with theming
 # class                 border  bground text    indicator child_border
-client.focused          #C06090 #F0A8D8 #030003 #F06090   #F0A8D8
-client.focused_inactive #904878 #C06090 #F0A8D8 #484E50   #C06090
-client.unfocused        #A81878 #781860 #F0A8D8 #292D2E   #781860
-client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
+client.focused          $blue $blue #030003 #F06090   $blue
+client.focused_inactive $blue $blue #F0A8D8 #484E50   $blue
+client.unfocused        $blue $blue #F0A8D8 #292D2E   $blue
+client.urgent           $blue #900000 #FFFFFF #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
 client.background       #F0A8D8
