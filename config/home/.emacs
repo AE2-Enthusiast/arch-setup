@@ -11,3 +11,8 @@
       version-control t)       ; use versioned backups
 (setq auto-save-file-name-transforms
       `((".*" "~/.emacs.d/saves/" t)))
+
+;;Org Mode
+
+;;Allows the use of letters as list indices
+(setq org-list-allow-alphabetical t)
