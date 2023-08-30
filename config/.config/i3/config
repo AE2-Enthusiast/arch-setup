@@ -183,6 +183,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Allows changing backlight brightness with the keys
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
