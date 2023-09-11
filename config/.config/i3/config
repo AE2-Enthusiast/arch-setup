@@ -217,7 +217,7 @@ exec picom
 exec nitrogen --restore
 
 # Removes window title bars
-default_border pixel 4
+default_border pixel 3
 set $blue #5bcefa
 
 # Colors! TODO split this into its own file to help with theming
