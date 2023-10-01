@@ -1,3 +1,11 @@
+;; Turns off the menu bar since it's not particularly useful in terminal
+(menu-bar-mode -1)
+
+;; Allows the buffer to be scrolled instead of the cursor with the mouse wheel
+;; (setq scroll-preserve-screen-position 'always) 
+
+;; (set-face-background (mode-line . "#ffffff"))
+
 ;; Limits lines in programs to 80 characters
 (setq-default fill-column 80)
 (add-hook 'prog-mode-hook #'auto-fill-mode)
