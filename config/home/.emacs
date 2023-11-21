@@ -35,9 +35,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(enby))
  '(custom-safe-themes
-   '("c6e9ae1e8dd9a33061f391cb7cb1ddf978031449f40f86f24308b908f216d4d4" "f38867c8227b5638f7b414ae20a0feef27d0d4d32a71de6c7b96fb86b12499ae" "eaaa579da5769f96369c3301f337b1fbcf6017e8a341edf386851a60d682bfab" "142a88adf94267f24522a90a4ab1023eaa519df2d0c28036ada9f90f44166a10" "76a935494576dcdeb5243bf901e8890e2dc3f038afa104e5b75add979f51cbb5" default)))
+   '("c6e9ae1e8dd9a33061f391cb7cb1ddf978031449f40f86f24308b908f216d4d4" default)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

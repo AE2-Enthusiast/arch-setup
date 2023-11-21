@@ -1,1 +1,4 @@
-alias ls='ls -la'
+alias ls='ls -lah'
+function open () {
+    xdg-open $@ & disown
+    }
