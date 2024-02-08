@@ -11,9 +11,11 @@
   )
  
 
-;; Limits lines in programs to 80 characters
+;; Sets auto fill to 80 characters
 (setq-default fill-column 80)
-(add-hook 'prog-mode-hook #'auto-fill-mode)
+(add-hook 'text-mode-hook 'turn-on-auto-fill) ;; auto-fill in text-files
+(setq-default indent-tabs-mode nil) ;; use spaces to indent stuff
+;; (add-hook 'prog-mode-hook #'auto-fill-mode) ;; auto-fill in code
 
 ;; Saves autosaves files somewhere else, ie in ~/.emacs.d/saves
 (setq backup-by-copying t      ; don't clobber symlinks
@@ -36,10 +38,19 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("c6e9ae1e8dd9a33061f391cb7cb1ddf978031449f40f86f24308b908f216d4d4" default)))
+   '("e5494adf200eeff1505839672150dde6053e086869189c381b1ce9b792dda3a8" "c6e9ae1e8dd9a33061f391cb7cb1ddf978031449f40f86f24308b908f216d4d4" default))
+ '(package-selected-packages '(xresources-theme unfill visual-fill-column lorem-ipsum)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; MELPA repo
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
+;; and `package-pinned-packages`. Most users will not need or want to do this.
+;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)

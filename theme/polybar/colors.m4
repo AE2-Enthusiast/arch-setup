@@ -5,4 +5,4 @@
 `primary =' argb(primary, 100)
 `secondary =' argb(secondary, 100)
 `alert =' argb(0xff0000, 100)
-`disabled =' argb(0x7078880, 100)
+`disabled =' argb(0x707888, 100)
