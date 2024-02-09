@@ -16,6 +16,9 @@ config.ini
 m4 dunst/base.m4 -I dunst/ -I lib/ > ../config/.config/dunst/dunstrc
 m4 dunst/colors.m4 -I dunst/ -I lib/ > ../config/.config/dunst/dunstrc.d/50-colors.conf
 
+wal -i background/$1.png
+pywal-discord
+pywalfox update
 i3-msg reload
 polybar-msg cmd restart
 feh --bg-center background/$1.png
