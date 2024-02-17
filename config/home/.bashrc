@@ -3,3 +3,5 @@
 # ( ) # Hide shell job control messages.
 # Not supported in the "fish" shell.
 (cat ~/.cache/wal/sequences &)
+
+source ~/.profile

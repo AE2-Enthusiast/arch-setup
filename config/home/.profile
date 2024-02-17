@@ -1,4 +1,4 @@
 alias ls='ls -lah'
 function open () {
-    xdg-open "$@" & disown
+    xdg-open "$@" > $(mktemp open-XXXX.log) & disown
 }
