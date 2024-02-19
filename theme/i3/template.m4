@@ -6,4 +6,4 @@ undivert(`base.conf')
 
 include(`colors.m4')
 
-include(`platforms.m4')
+include(platforms.m4)
