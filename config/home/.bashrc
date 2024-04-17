@@ -1,7 +1,7 @@
-# Import colorscheme from 'wal' asynchronously
-# &   # Run the process in the background.
-# ( ) # Hide shell job control messages.
-# Not supported in the "fish" shell.
-(cat ~/.cache/wal/sequences &)
+alias ls='ls -lah'
 
-source ~/.profile
+function open () {
+    xdg-open "$@" > $(mktemp /tmp/open-XXXX.log) &
+}
+
+(cat ~/.cache/wal/sequences &)
