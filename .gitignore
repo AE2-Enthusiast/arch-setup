@@ -2,3 +2,4 @@ config/.config/alacritty/alacritty.toml
 config/.config/i3/config
 config/.config/polybar/config.ini
 config/.config/dunst/
+script/2in1screen

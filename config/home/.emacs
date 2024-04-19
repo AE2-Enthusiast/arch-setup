@@ -3,6 +3,7 @@
 
 ;; transparent backgrounds
 (add-to-list 'default-frame-alist '(alpha-background . 70))
+(add-to-list 'default-frame-alist '(alpha . (100 80)))
 ; (add-to-list 'default-frame-alist '(alpha-background . (100 . 70)))
 
 ;; add ino files to c mode (arduino code)
