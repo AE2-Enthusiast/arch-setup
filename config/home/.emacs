@@ -1,5 +1,5 @@
 ;; font size, in .1 of a pt
-(set-face-attribute 'default nil :height 100)
+(set-face-attribute 'default nil :height 120)
 
 ;; transparent backgrounds
 (add-to-list 'default-frame-alist '(alpha-background . 70))
@@ -33,7 +33,7 @@
 (setq-default fill-column 80)
 (add-hook 'text-mode-hook 'turn-on-auto-fill) ;; auto-fill in text-files
 (setq-default indent-tabs-mode nil) ;; use spaces to indent stuff
-;; (add-hook 'prog-mode-hook #'auto-fill-mode) ;; auto-fill in code
+ (add-hook 'prog-mode-hook #'subword-mode) ;; auto-fill in code
 
 ;; Saves autosaves files somewhere else, ie in ~/.emacs.d/saves
 (setq backup-by-copying t      ; don't clobber symlinks
