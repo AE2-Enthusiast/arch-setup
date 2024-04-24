@@ -1,5 +1,5 @@
 ;; font size, in .1 of a pt
-(set-face-attribute 'default nil :height 130)
+(set-face-attribute 'default nil :height 100)
 
 ;; transparent backgrounds
 (add-to-list 'default-frame-alist '(alpha-background . 70))
