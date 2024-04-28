@@ -21,10 +21,10 @@ pywal-discord
 pywalfox update
 i3-msg reload
 polybar-msg cmd restart
-feh --bg-center $(./background.sh $1)
+./background.sh $1 1920 1080 1600 900
 killall dunst
 
 rm theme.m4
 rm platform.m4
 
-notify-send -i ~/git/arch-setup/theme/background/$1.png 'Succesfully switched to the '$1' theme!'
+notify-send -i ~/git/arch-setup/theme/output1.png 'Succesfully switched to the '$1' theme!'
