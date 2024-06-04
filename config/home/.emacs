@@ -1,5 +1,10 @@
-;; add ino files to c mode (arduino code)
-(add-to-list 'auto-mode-alist '("\\.ino\\'" . c-mode))
+;; MELPA repo
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
+;; and `package-pinned-packages`. Most users will not need or want to do this.
+;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
 
 ;; Turns off the menu bar since it's not particularly useful
 (menu-bar-mode -1)
@@ -9,7 +14,7 @@
 (set-face-attribute 'default nil :height 120)
 
 ;; transparent backgrounds
-(add-to-list 'default-frame-alist '(alpha-background . 70))
+(add-to-list 'default-frame-alist '(alpha-background . 75))
 (add-to-list 'default-frame-alist '(alpha . (100 80)))
 ; (add-to-list 'default-frame-alist '(alpha-background . (100 . 70)))
 
@@ -38,7 +43,23 @@
 (setq-default fill-column 80)
 (add-hook 'text-mode-hook 'turn-on-auto-fill) ;; auto-fill in text-files
 (setq-default indent-tabs-mode nil) ;; use spaces to indent stuff
- (add-hook 'prog-mode-hook #'subword-mode) ;; auto-fill in code
+(add-hook 'prog-mode-hook #'subword-mode) ;; auto-fill in code
+
+;; which-key helps with showing possible keybinds as they're typed in
+(add-to-list 'load-path "path/to/which-key.el")
+(require 'which-key)
+(which-key-mode)
+
+;; use lsp-mode in java
+(use-package lsp-mode
+  :init
+  (setq lsp-keymap-prefix "M-c")
+:hook
+  ((lsp-mode . lsp-enable-which-key-integration)))
+(add-hook 'java-mode-hook #'lsp)
+
+;; add ino files to c mode (arduino code)
+(add-to-list 'auto-mode-alist '("\\.ino\\'" . c-mode))
 
 ;; Saves autosaves files somewhere else, ie in ~/.emacs.d/saves
 (setq backup-by-copying t      ; don't clobber symlinks
@@ -63,18 +84,11 @@
  '(custom-safe-themes
    '("e5494adf200eeff1505839672150dde6053e086869189c381b1ce9b792dda3a8" "c6e9ae1e8dd9a33061f391cb7cb1ddf978031449f40f86f24308b908f216d4d4" default))
  '(inhibit-startup-screen t)
- '(package-selected-packages '(xresources-theme unfill visual-fill-column lorem-ipsum)))
+ '(package-selected-packages
+   '(which-key company lsp-java lsp-mode xresources-theme unfill visual-fill-column lorem-ipsum)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-;; MELPA repo
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
-;; and `package-pinned-packages`. Most users will not need or want to do this.
-;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-(package-initialize)
