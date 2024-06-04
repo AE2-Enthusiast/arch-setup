@@ -1,3 +1,10 @@
+;; add ino files to c mode (arduino code)
+(add-to-list 'auto-mode-alist '("\\.ino\\'" . c-mode))
+
+;; Turns off the menu bar since it's not particularly useful
+(menu-bar-mode -1)
+
+(if window-system (
 ;; font size, in .1 of a pt
 (set-face-attribute 'default nil :height 120)
 
@@ -6,19 +13,17 @@
 (add-to-list 'default-frame-alist '(alpha . (100 80)))
 ; (add-to-list 'default-frame-alist '(alpha-background . (100 . 70)))
 
-;; add ino files to c mode (arduino code)
-(add-to-list 'auto-mode-alist '("\\.ino\\'" . c-mode))
 
-;; Turns off the menu bar since it's not particularly useful in terminal
-(menu-bar-mode -1)
+
 (scroll-bar-mode -1)
-(tool-bar-mode -1) 
+(tool-bar-mode -1))
 
 ;; handles transparency changes when focus changes
 (set-frame-parameter (selected-frame) 'alpha '(100 80))
 
 ;; makes new windows open as frames instead
 (setq pop-up-windows t)
+)
 
 ;; Allows the buffer to be scrolled instead of the cursor with the mouse wheel
 ;;;; Mouse scrolling in terminal emacs
@@ -27,7 +32,7 @@
   (xterm-mouse-mode 1)
   (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
   (global-set-key (kbd "<mouse-5>") 'scroll-up-line)
-  ) 
+  )
 
 ;; Sets auto fill to 80 characters
 (setq-default fill-column 80)
