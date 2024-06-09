@@ -5,16 +5,20 @@ cd /home/stone/git/arch-setup/theme
 cp ./.theme/$1.m4 theme.m4
 cp ./.platform/$2.m4 platform.m4
 
-m4 i3/template.m4 -I i3/ -I lib/ > ../config/.config/i3/config
+mkdir -p ~/.config/i3/
+m4 i3/template.m4 -I i3/ -I lib/ > ~/.config/i3/config
 
-m4 alacritty/template.m4 -I alacritty/ -I lib/ > ../config/.config/alacritty/\
+mkdir -p ~/.config/alacritty
+m4 alacritty/template.m4 -I alacritty/ -I lib/ > ~/.config/alacritty/\
 alacritty.toml
 
-m4 polybar/template.m4 -I polybar/ -I lib/ > ../config/.config/polybar/\
+mkdir -p ~/.config/polybar
+m4 polybar/template.m4 -I polybar/ -I lib/ > ~/.config/polybar/\
 config.ini
 
-m4 dunst/base.m4 -I dunst/ -I lib/ > ../config/.config/dunst/dunstrc
-m4 dunst/colors.m4 -I dunst/ -I lib/ > ../config/.config/dunst/dunstrc.d/50-colors.conf
+mkdir -p ~/.config/dunst/dunstrc.d/
+m4 dunst/base.m4 -I dunst/ -I lib/ > ~/.config/dunst/dunstrc
+m4 dunst/colors.m4 -I dunst/ -I lib/ > ~/.config/dunst/dunstrc.d/50-colors.conf
 
 wal -nf .theme/$1.json
 pywal-discord
