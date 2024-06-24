@@ -1,0 +1,8 @@
+[user]
+	name = Raine
+	email = samstone9001@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	editor = emacs
+        excludesFile = ~/.config/git/.gitignore
