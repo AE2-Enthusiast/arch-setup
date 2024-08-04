@@ -20,15 +20,15 @@ mkdir -p ~/.config/dunst/dunstrc.d/
 m4 dunst/base.m4 -I dunst/ -I lib/ > ~/.config/dunst/dunstrc
 m4 dunst/colors.m4 -I dunst/ -I lib/ > ~/.config/dunst/dunstrc.d/50-colors.conf
 
-wal -nf .theme/$1.json
+./background.sh $1 1920 1080 1600 900
+wal -f .theme/$1.json
 pywal-discord
 pywalfox update
 i3-msg reload
 polybar-msg cmd restart
-./background.sh $1 1920 1080 1600 900
 killall dunst
 
 rm theme.m4
 rm platform.m4
 
-notify-send -i ~/git/arch-setup/theme/output1.png 'Succesfully switched to the '$1' theme!'
+notify-send -i ~/git/arch-setup/theme/output.png 'Succesfully switched to the '$1' theme!'

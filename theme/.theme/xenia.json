@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/stone/git/arch-setup/resources/backgrounds/xenia.png",
+    "alpha": "100",
+
+    "special": {
+        "background": "#18080e",
+        "foreground": "#ccd3de",
+        "cursor": "#ccd3de"
+    },
+    "colors": {
+        "color0": "#18080e",
+        "color1": "#99857B",
+        "color2": "#6E3D84",
+        "color3": "#196999",
+        "color4": "#665B93",
+        "color5": "#C149A0",
+        "color6": "#34ADC7",
+        "color7": "#ccd3de",
+        "color8": "#0d0d0d",
+        "color9": "#99857B",
+        "color10": "#6E3D84",
+        "color11": "#196999",
+        "color12": "#665B93",
+        "color13": "#C149A0",
+        "color14": "#34ADC7",
+        "color15": "#ccd3de"
+    }
+}

@@ -65,7 +65,7 @@
   ; (set-frame-parameter (selected-frame) 'alpha '(100 80))
 
   ;; font size, in .1 of a pt
-  (set-face-attribute 'default nil :height 120)
+  (set-face-attribute 'default nil :height 125)
 
 ;(if (display-graphic-p)
 ;    (on-gui-setup-setup())
@@ -107,9 +107,13 @@
  '(lsp-java-completion-lazy-resolve-text-edit-enabled t)
  '(lsp-java-format-settings-profile nil)
  '(lsp-java-format-settings-url "\"/home/stone/.config/eclipse-formatter.xml\"")
- '(lsp-java-server-config-dir "/home/stone/.emacs.d/lsp-mode/eclipse-jdtls/")
- '(lsp-java-server-install-dir "/usr/share/java/jdtls/")
  '(lsp-java-vmargs
    '("-XX:+UseParallelGC" "-XX:GCTimeRatio=4" "-XX:AdaptiveSizePolicyWeight=90" "-Dsun.zip.disableMemoryMapping=true" "-Xmx4G" "-Xms100m"))
  '(package-selected-packages
    '(projectile flycheck yasnippet which-key company lsp-java lsp-mode xresources-theme unfill visual-fill-column lorem-ipsum)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

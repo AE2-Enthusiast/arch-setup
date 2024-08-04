@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/stone/git/arch-setup/resources/backgrounds/magpi_xenia_linux.png",
+    "alpha": "100",
+    "special": {
+        "background": "#0d0d0d",
+        "foreground": "#e6dee5",
+        "cursor": "#e6dee5"
+    },
+    "colors": {
+        "color0": "#0d0d0d",
+        "color1": "#4DA4C6",
+        "color2": "#5BCEFA",
+        "color3": "#6AD6FC",
+        "color4": "#D3999E",
+        "color5": "#C4B0BA",
+        "color6": "#F5A9B8",
+        "color7": "#e6dee5",
+        "color8": "#101010",
+        "color9": "#4DA4C6",
+        "color10": "#5BCEFA",
+        "color11": "#6AD6FC",
+        "color12": "#D3999E",
+        "color13": "#C4B0BA",
+        "color14": "#F5A9B8",
+        "color15": "#e6dee5"
+    }
+}
