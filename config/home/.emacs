@@ -104,6 +104,7 @@
  '(custom-safe-themes
    '("d8683d4fc08471cc5d1250e26525a927a02c428ec131ec080eea60662a263d44" "e5494adf200eeff1505839672150dde6053e086869189c381b1ce9b792dda3a8" "c6e9ae1e8dd9a33061f391cb7cb1ddf978031449f40f86f24308b908f216d4d4" default))
  '(inhibit-startup-screen t)
+ '(lsp-enable-file-watchers nil)
  '(lsp-java-completion-lazy-resolve-text-edit-enabled t)
  '(lsp-java-format-settings-profile nil)
  '(lsp-java-format-settings-url "\"/home/stone/.config/eclipse-formatter.xml\"")
