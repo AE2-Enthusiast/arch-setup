@@ -6,6 +6,8 @@ function open () {
     xdg-open "$@" > $(mktemp /tmp/open-XXXX.log) & disown $!
 }
 
-(cat ~/.cache/wal/sequences &)
+if ! ([ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]); then
+    cat ~/.cache/wal/sequences
+fi
 
 source ~/.profile
