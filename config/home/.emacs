@@ -56,7 +56,7 @@
   ;; useful beyond Corfu.
   (read-extended-command-predicate #'command-completion-default-include-p))
 
-(add-hook 'java-mode-hook 'eglot-java-mode)
+;;(add-hook 'java-mode-hook 'eglot-java-mode)
 
 ;; Turns off the menu bar since it's not particularly useful
 (menu-bar-mode -1)
@@ -205,7 +205,9 @@
    '(:foreground default :background Transparent :scale 1.5 :html-foreground
                  "Black" :html-background "Transparent" :html-scale 1.0
                  :matchers ("begin" "$1" "$" "$$" "\\(" "\\[")))
- '(package-selected-packages nil))
+ '(package-selected-packages
+   '(autodisass-java-bytecode company corfu eglot-java flycheck helm lsp-java popup
+                              projectile vertico which-key yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
