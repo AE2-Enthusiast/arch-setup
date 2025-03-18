@@ -1,4 +1,4 @@
-alias ls='ls -lah'
+alias ls='ls -lAh'
 alias sl='sl -l16'
 export EDITOR=emacs
 
@@ -7,7 +7,8 @@ function open () {
 }
 
 if ! ([ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]); then
-    cat ~/.cache/wal/sequences
+#    cat ~/.cache/wal/sequences
+    export BROSWER=surf
 fi
 
 source ~/.profile

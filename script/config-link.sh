@@ -15,7 +15,8 @@
 # Links everything in the .config folder into the default XDG config folder
 
 xdgConfigPath=$(realpath ../config/.config)
-ln -sfv -t ~/.config/ "$xdgConfigPath"/*
+ln -sv -t ~/.config/ "$xdgConfigPath"/*
+ln -sv $(realpath ../resources/shaders) ../config/.config/ghostty/shaders
 
 homeConfigPath=$(realpath ../config/home)
 IFS='
@@ -25,6 +26,6 @@ homeConfigs=$(\ls -A1 $homeConfigPath)
 for path in $homeConfigs
 do
     #echo $homeConfigPath/$path
-    ln -sfv -t ~/ $homeConfigPath/$path
+    ln -sv -t ~/ $homeConfigPath/$path
 done
 unset $IFS

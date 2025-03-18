@@ -5,6 +5,7 @@
 ;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
+(use-package auctex)
 (use-package projectile)
 (use-package yasnippet :config (yas-global-mode))
 (use-package hydra)
@@ -95,6 +96,7 @@
 (setq-default fill-column 80)
 (add-hook 'text-mode-hook 'turn-on-auto-fill) ;; auto-fill in text-files
 (setq-default indent-tabs-mode nil) ;; use spaces to indent stuff
+(setq-default tab-width 2) ;; use 2 spaces to indent
 (add-hook 'prog-mode-hook #'subword-mode) ;; see camelCase as separate words when moving by word
 
 ;; add ino files to c mode (arduino code)
@@ -188,9 +190,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(corfu-auto t)
- '(custom-enabled-themes nil)
+ '(custom-enabled-themes '(green-phosphor))
  '(custom-safe-themes
-   '("d8683d4fc08471cc5d1250e26525a927a02c428ec131ec080eea60662a263d44"
+   '("1498f18622a6b6afa91dcaa6c27febe439412dec96905b38cd9ef4f4235a7538"
+     "d8683d4fc08471cc5d1250e26525a927a02c428ec131ec080eea60662a263d44"
      "e5494adf200eeff1505839672150dde6053e086869189c381b1ce9b792dda3a8"
      "c6e9ae1e8dd9a33061f391cb7cb1ddf978031449f40f86f24308b908f216d4d4" default))
  '(inhibit-startup-screen t)
@@ -206,8 +209,9 @@
                  "Black" :html-background "Transparent" :html-scale 1.0
                  :matchers ("begin" "$1" "$" "$$" "\\(" "\\[")))
  '(package-selected-packages
-   '(autodisass-java-bytecode company corfu eglot-java flycheck helm lsp-java popup
-                              projectile vertico which-key yasnippet)))
+   '(auctex autodisass-java-bytecode company corfu eglot-java flycheck
+            green-phosphor-theme helm json-mode lsp-java popup projectile
+            vertico which-key yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
