@@ -77,7 +77,7 @@
   (tool-bar-mode -1)
   
   ;; transparent backgrounds
-  (add-to-list 'default-frame-alist '(alpha-background . 75))
+;  (add-to-list 'default-frame-alist '(alpha-background . 75))
   ;(add-to-list 'default-frame-alist '(alpha . (100 80)))
 
 
