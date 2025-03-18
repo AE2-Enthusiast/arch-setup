@@ -17,6 +17,8 @@
 xdgConfigPath=$(realpath ../config/.config)
 ln -sv -t ~/.config/ "$xdgConfigPath"/*
 ln -sv $(realpath ../resources/shaders) ../config/.config/ghostty/shaders
+mkdir -p ~/.local/share/fonts
+ln -sv -t ~/.local/share/fonts/ $(realpath ../resources/fonts)/*
 
 homeConfigPath=$(realpath ../config/home)
 IFS='
