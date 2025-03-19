@@ -6,7 +6,7 @@ function open () {
 }
 
 if ! ([ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]); then
-#    cat ~/.cache/wal/sequences
+    cat ~/.cache/wal/sequences
     export BROSWER=surf
 fi
 

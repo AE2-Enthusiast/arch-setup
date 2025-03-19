@@ -29,7 +29,8 @@ const vec3[24] samples = {
   };
 
 float lum(vec4 c) {
-  return 0.299 * c.r + 0.587 * c.g + 0.114 * c.b;
+//  return 0.299 * c.r + 0.587 * c.g + 0.114 * c.b;
+    return .33 * c.r + .33 * c.g + .33 * c.b;
 }
 
 void mainImage(out vec4 fragColor, in vec2 fragCoord) {

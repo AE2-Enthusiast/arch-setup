@@ -9,19 +9,19 @@ dnl
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    `foreground =' "`#'888888"
+    `foreground =' "rgb(foreground)"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    `foreground =' "#ffffff"
+    `foreground =' "rgb(foreground)"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_critical]
-    `foreground =' "`#'ffffff"
+    `foreground =' "rgb(foreground)"
     frame_color = "`#'ff0000"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
