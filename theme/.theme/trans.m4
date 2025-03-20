@@ -1,4 +1,5 @@
 define(`background', `0x222534')dnl
+define(`foreground', `0xFFFFFF')dnl
 define(`focused', `75')dnl
 define(`unfocused', `60')dnl
 dnl
