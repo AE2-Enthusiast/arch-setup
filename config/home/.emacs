@@ -77,7 +77,7 @@
   (tool-bar-mode -1)
   
   ;; transparent backgrounds
-;  (add-to-list 'default-frame-alist '(alpha-background . 75))
+  (add-to-list 'default-frame-alist '(alpha-background . 75))
   ;(add-to-list 'default-frame-alist '(alpha . (100 80)))
 
 
@@ -190,7 +190,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(corfu-auto t)
- '(custom-enabled-themes '(wombat))
+ '(custom-enabled-themes nil)
  '(custom-safe-themes
    '("1498f18622a6b6afa91dcaa6c27febe439412dec96905b38cd9ef4f4235a7538"
      "d8683d4fc08471cc5d1250e26525a927a02c428ec131ec080eea60662a263d44"

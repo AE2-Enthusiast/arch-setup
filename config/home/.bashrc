@@ -12,4 +12,4 @@ fi
 
 source ~/.profile
 
-echo -e "$(date)" | pv -L 14 -q
+#echo -e "$(date)" | pv -L 14 -q

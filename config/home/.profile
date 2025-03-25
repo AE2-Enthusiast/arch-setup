@@ -1,4 +1,4 @@
-alias ls='ls -lAh --group-directories-first | pv -qL 1024'
+alias ls='ls -lAh --group-directories-first'
 alias emacs='emacs -nw'
 
 SSH_ENV="$HOME/.ssh/agent-environment"
