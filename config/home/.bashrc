@@ -1,4 +1,3 @@
-alias sl='sl -l16'
 export EDITOR=emacs
 
 function open () {
@@ -11,5 +10,4 @@ if ! ([ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]); then
 fi
 
 source ~/.profile
-
 #echo -e "$(date)" | pv -L 14 -q

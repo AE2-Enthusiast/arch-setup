@@ -1,5 +1,7 @@
 alias ls='ls -lAh --group-directories-first'
+alias sl='sl -l16'
 alias emacs='emacs -nw'
+alias feh='feh --auto-zoom --scale-down'
 
 SSH_ENV="$HOME/.ssh/agent-environment"
 
