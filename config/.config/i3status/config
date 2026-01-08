@@ -1,0 +1,62 @@
+general {
+  output_format = "i3bar"
+  colors = true
+  interval = 10
+  #separator = "|"
+}
+
+order += "wireless wlan0"
+order += "volume master"
+order += "battery 0"
+#order += "cpu_temperature 0" 
+order += "memory"
+order += "time"
+
+wireless wlan0 {
+format_up = "%ip on %essid (%quality)"
+format_down = "W: down"
+format_quality = "%02d%s"
+}
+
+battery 0 {
+format = "%status %percentage @ %emptytime"
+format_down = "No battery"
+status_chr = "⚡ CHR"
+status_bat = "🔋 BAT"
+status_unk = "? UNK"
+status_full = "☻ FULL"
+status_idle = "☻ IDLE"
+path = "/sys/class/power_supply/BAT%d/uevent"
+low_threshold = 10
+align = center
+min_width = 240
+}
+
+path_exists VPN {
+# path exists when a VPN tunnel launched by nmcli/nm-applet is active
+path = "/proc/sys/net/ipv4/conf/tun0"
+}
+
+time {
+format = "%Y-%m-%d %H:%M "
+#hide_if_equals_localtime = true
+align = right
+min_width = 180
+}
+
+cpu_temperature 0 {
+format = "T: %degrees °C"
+path = "/sys/devices/platform/coretemp.0/temp1_input"
+}
+
+memory {
+format = "%used"
+threshold_degraded = "10%"
+format_degraded = "MEMORY: %free"
+align = center
+min_width = 90
+}
+
+volume master {
+device = "pulse"
+}

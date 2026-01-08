@@ -73,7 +73,7 @@
   (tool-bar-mode -1)
   
   ;; transparent backgrounds
-  ;; (add-to-list 'default-frame-alist '(alpha-background . 75))
+  (add-to-list 'default-frame-alist '(alpha-background . 75))
   ;(add-to-list 'default-frame-alist '(alpha . (100 80)))
 
 
@@ -133,21 +133,28 @@
  ;; If there is more than one, they won't work right.
  '(c-basic-offset 2)
  '(corfu-auto t)
- '(custom-enabled-themes '(tango-dark))
+ '(custom-enabled-themes nil)
  '(custom-safe-themes
-   '("1498f18622a6b6afa91dcaa6c27febe439412dec96905b38cd9ef4f4235a7538" "d8683d4fc08471cc5d1250e26525a927a02c428ec131ec080eea60662a263d44" "e5494adf200eeff1505839672150dde6053e086869189c381b1ce9b792dda3a8" "c6e9ae1e8dd9a33061f391cb7cb1ddf978031449f40f86f24308b908f216d4d4" default))
+   '("1498f18622a6b6afa91dcaa6c27febe439412dec96905b38cd9ef4f4235a7538"
+     "d8683d4fc08471cc5d1250e26525a927a02c428ec131ec080eea60662a263d44"
+     "e5494adf200eeff1505839672150dde6053e086869189c381b1ce9b792dda3a8"
+     "c6e9ae1e8dd9a33061f391cb7cb1ddf978031449f40f86f24308b908f216d4d4" default))
  '(inhibit-startup-screen t)
  '(lsp-enable-file-watchers nil)
  '(lsp-java-completion-lazy-resolve-text-edit-enabled t)
  '(lsp-java-format-settings-profile nil)
  '(lsp-java-format-settings-url "\"/home/stone/.config/eclipse-formatter.xml\"")
  '(lsp-java-vmargs
-   '("-XX:+UseParallelGC" "-XX:GCTimeRatio=4" "-XX:AdaptiveSizePolicyWeight=90" "-Dsun.zip.disableMemoryMapping=true" "-Xmx4G" "-Xms100m"))
+   '("-XX:+UseParallelGC" "-XX:GCTimeRatio=4" "-XX:AdaptiveSizePolicyWeight=90"
+     "-Dsun.zip.disableMemoryMapping=true" "-Xmx4G" "-Xms100m"))
  '(org-format-latex-options
-   '(:foreground default :background Transparent :scale 1.5 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
-                 ("begin" "$1" "$" "$$" "\\(" "\\[")))
+   '(:foreground default :background Transparent :scale 1.5 :html-foreground
+                 "Black" :html-background "Transparent" :html-scale 1.0
+                 :matchers ("begin" "$1" "$" "$$" "\\(" "\\[")))
  '(package-selected-packages
-   '(csv-mode web-mode php-mode tree-sitter-langs auctex autodisass-java-bytecode company corfu eglot-java flycheck green-phosphor-theme helm json-mode lsp-java popup projectile vertico which-key yasnippet))
+   '(auctex autodisass-java-bytecode company corfu csv-mode eglot-java ement
+            flycheck green-phosphor-theme helm json-mode lsp-java php-mode popup
+            projectile tree-sitter-langs vertico web-mode which-key yasnippet))
  '(web-mode-css-indent-offset 2)
  '(web-mode-markup-indent-offset 2))
 (custom-set-faces
