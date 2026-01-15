@@ -154,7 +154,9 @@
  '(package-selected-packages
    '(auctex autodisass-java-bytecode company corfu csv-mode eglot-java ement
             flycheck green-phosphor-theme helm json-mode lsp-java php-mode popup
-            projectile tree-sitter-langs vertico web-mode which-key yasnippet))
+            projectile rust-mode tree-sitter-langs vertico web-mode which-key
+            yasnippet))
+ '(rust-indent-offset 2)
  '(web-mode-css-indent-offset 2)
  '(web-mode-markup-indent-offset 2))
 (custom-set-faces
