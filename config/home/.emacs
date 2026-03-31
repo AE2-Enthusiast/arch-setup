@@ -157,6 +157,7 @@
             projectile rust-mode tree-sitter-langs vertico web-mode which-key
             yasnippet))
  '(rust-indent-offset 2)
+ '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
  '(web-mode-markup-indent-offset 2))
 (custom-set-faces

@@ -21,7 +21,7 @@ m4 dunst/base.m4 -I dunst/ -I lib/ > ~/.config/dunst/dunstrc
 m4 dunst/colors.m4 -I dunst/ -I lib/ > ~/.config/dunst/dunstrc.d/50-colors.conf
 
 ./background.sh $1 1920 1080 1600 900
-wal -f .theme/$1.json
+wal -f .theme/$1.json -n
 pywal-discord -p ~/.config/vesktop/themes/
 pywalfox update
 i3-msg reload

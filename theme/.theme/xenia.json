@@ -1,7 +1,5 @@
 {
-    "wallpaper": "/home/stone/git/arch-setup/resources/backgrounds/xenia.png",
     "alpha": "100",
-
     "special": {
         "background": "#18080e",
         "foreground": "#ffffff",
