@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 cd /home/stone/git/arch-setup/theme
 
