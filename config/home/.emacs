@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 ;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
@@ -9,7 +10,18 @@
 (use-package projectile)
 (use-package yasnippet :config (yas-global-mode))
 (use-package hydra)
-(use-package vertico)
+;; Enable Vertico.
+(use-package vertico
+  ;; (vertico-scroll-margin 0) ;; Different scroll margin
+  ;; (vertico-count 20) ;; Show more candidates
+  ;; (vertico-resize t) ;; Grow and shrink the Vertico minibuffer
+  ;; (vertico-cycle t) ;; Enable cycling for `vertico-next/previous'
+  :init
+  (vertico-mode)
+  :bind (:map vertico-map
+              ("<TAB>" . minibuffer-complete)
+              ("<SPC>" . minibuffer-complete)))
+
 (use-package which-key :config (which-key-mode))
 ; (use-package jarchive
 ;  :ensure t
@@ -60,7 +72,7 @@
 (menu-bar-mode -1)
 
 ;(defun on-terminal-setup-setup ()
-  "sets up terminal specific stuff"
+  ;;"sets up terminal specific stuff"
   ;; Allows the buffer to be scrolled instead of the cursor with the mouse wheel
   (xterm-mouse-mode 1)
   (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
@@ -134,19 +146,27 @@
  '(corfu-auto t)
  '(custom-enabled-themes '(tango-dark))
  '(custom-safe-themes
-   '("1498f18622a6b6afa91dcaa6c27febe439412dec96905b38cd9ef4f4235a7538" "d8683d4fc08471cc5d1250e26525a927a02c428ec131ec080eea60662a263d44" "e5494adf200eeff1505839672150dde6053e086869189c381b1ce9b792dda3a8" "c6e9ae1e8dd9a33061f391cb7cb1ddf978031449f40f86f24308b908f216d4d4" default))
+   '("1498f18622a6b6afa91dcaa6c27febe439412dec96905b38cd9ef4f4235a7538"
+     "d8683d4fc08471cc5d1250e26525a927a02c428ec131ec080eea60662a263d44"
+     "e5494adf200eeff1505839672150dde6053e086869189c381b1ce9b792dda3a8"
+     "c6e9ae1e8dd9a33061f391cb7cb1ddf978031449f40f86f24308b908f216d4d4" default))
  '(inhibit-startup-screen t)
  '(lsp-enable-file-watchers nil)
  '(lsp-java-completion-lazy-resolve-text-edit-enabled t)
  '(lsp-java-format-settings-profile nil)
  '(lsp-java-format-settings-url "\"/home/stone/.config/eclipse-formatter.xml\"")
  '(lsp-java-vmargs
-   '("-XX:+UseParallelGC" "-XX:GCTimeRatio=4" "-XX:AdaptiveSizePolicyWeight=90" "-Dsun.zip.disableMemoryMapping=true" "-Xmx4G" "-Xms100m"))
+   '("-XX:+UseParallelGC" "-XX:GCTimeRatio=4" "-XX:AdaptiveSizePolicyWeight=90"
+     "-Dsun.zip.disableMemoryMapping=true" "-Xmx4G" "-Xms100m"))
  '(org-format-latex-options
-   '(:foreground default :background Transparent :scale 1.5 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
-                 ("begin" "$1" "$" "$$" "\\(" "\\[")))
+   '(:foreground default :background Transparent :scale 1.5 :html-foreground
+                 "Black" :html-background "Transparent" :html-scale 1.0
+                 :matchers ("begin" "$1" "$" "$$" "\\(" "\\[")))
  '(package-selected-packages
-   '(csv-mode web-mode php-mode tree-sitter-langs auctex autodisass-java-bytecode company corfu eglot-java flycheck green-phosphor-theme helm json-mode lsp-java popup projectile vertico which-key yasnippet))
+   '(auctex autodisass-java-bytecode company corfu csv-mode eglot-java flycheck
+            green-phosphor-theme helm json-mode lsp-java orderless php-mode
+            popup projectile sed-mode tree-sitter-langs vertico web-mode
+            which-key yasnippet))
  '(web-mode-css-indent-offset 2)
  '(web-mode-markup-indent-offset 2))
 (custom-set-faces
