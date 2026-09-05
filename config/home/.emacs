@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 ;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
@@ -9,7 +10,18 @@
 (use-package projectile)
 (use-package yasnippet :config (yas-global-mode))
 (use-package hydra)
-(use-package vertico)
+;; Enable Vertico.
+(use-package vertico
+  ;; (vertico-scroll-margin 0) ;; Different scroll margin
+  ;; (vertico-count 20) ;; Show more candidates
+  ;; (vertico-resize t) ;; Grow and shrink the Vertico minibuffer
+  ;; (vertico-cycle t) ;; Enable cycling for `vertico-next/previous'
+  :init
+  (vertico-mode)
+  :bind (:map vertico-map
+              ("<TAB>" . minibuffer-complete)
+              ("<SPC>" . minibuffer-complete)))
+
 (use-package which-key :config (which-key-mode))
 ; (use-package jarchive
 ;  :ensure t
@@ -60,7 +72,7 @@
 (menu-bar-mode -1)
 
 ;(defun on-terminal-setup-setup ()
-  "sets up terminal specific stuff"
+  ;;"sets up terminal specific stuff"
   ;; Allows the buffer to be scrolled instead of the cursor with the mouse wheel
   (xterm-mouse-mode 1)
   (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
